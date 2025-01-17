@@ -103,6 +103,24 @@
             padding: 10px;
             margin-top: 20px;
         }
+        main > section .Block1 , .Block2 {
+            width: 600px;
+            height: 400px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: #666;
+            border: 1px solid #ddd;
+            margin: 10px auto;
+            width: 100%;
+            max-width: 600px;
+        }
+        main > section .Block2
+        {
+            height: 200px;
+        }
     </style>
 </head>
 <body>
@@ -124,11 +142,11 @@
     <main>
         <section>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum suscipit neque, eu fermentum augue pellentesque eu.</p>
-            <img src="./600x400.jpg" alt="Placeholder">
+            <div class="Block1" > 600 * 400 </div>
         </section>
         <section>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum suscipit neque, eu fermentum augue pellentesque eu.</p>
-            <img src="./600x200.jpg" alt="Placeholder">
+            <div class="Block2" > 600 * 200 </div>
         </section>
     </main>
 
