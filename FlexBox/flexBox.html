@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Burger Responsive</title>
+    <title>Responsive</title>
     <style>
         * {
             margin: 0;
@@ -15,7 +15,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Header et menu */
         header {
             background-color: #333;
             color: white;
@@ -45,7 +44,6 @@
             text-decoration: underline;
         }
 
-        /* Bouton menu burger (mobile) */
         .burger {
             display: none;
             flex-direction: column;
@@ -59,30 +57,29 @@
             background-color: white;
         }
 
-        /* Media Query pour mobile */
         @media (max-width: 768px) {
             nav {
-                display: none; /* Menu masqué par défaut */
+                display: none; 
                 flex-direction: column;
                 gap: 10px;
                 background-color: #333;
                 position: absolute;
-                top: 60px; /* Juste en dessous du header */
+                top: 60px; 
                 right: 20px;
                 padding: 10px;
                 border-radius: 5px;
             }
 
             nav.active {
-                display: flex; /* Afficher le menu si actif */
+                display: flex; 
             }
 
             .burger {
-                display: flex; /* Afficher le bouton burger */
+                display: flex; 
             }
         }
 
-        /* Styles pour le contenu principal */
+       
         main {
             padding: 20px;
             text-align: center;
@@ -94,8 +91,6 @@
             height: auto;
             margin: 20px 0;
         }
-
-        /* Styles du footer */
         footer {
             background-color: #333;
             color: white;
@@ -155,12 +150,10 @@
     </footer>
 
     <script>
-        // Script JavaScript pour activer le menu burger
         const burger = document.getElementById('burger');
         const menu = document.getElementById('menu');
-
         burger.addEventListener('click', () => {
-            menu.classList.toggle('active'); // Toggle la classe active pour afficher ou masquer le menu
+            menu.classList.toggle('active'); 
         });
     </script>
 </body>
