@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Burger Responsive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header et menu */
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Bouton menu burger (mobile) */
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+        }
+
+        /* Media Query pour mobile */
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* Menu masqué par défaut */
+                flex-direction: column;
+                gap: 10px;
+                background-color: #333;
+                position: absolute;
+                top: 60px; /* Juste en dessous du header */
+                right: 20px;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            nav.active {
+                display: flex; /* Afficher le menu si actif */
+            }
+
+            .burger {
+                display: flex; /* Afficher le bouton burger */
+            }
+        }
+
+        /* Styles pour le contenu principal */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        /* Styles du footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="menu">
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum suscipit neque, eu fermentum augue pellentesque eu.</p>
+            <img src="./600x400.jpg" alt="Placeholder">
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum suscipit neque, eu fermentum augue pellentesque eu.</p>
+            <img src="./600x200.jpg" alt="Placeholder">
+        </section>
+    </main>
+
+    <footer>
+        © 2025 Votre entreprise. Tous droits réservés.
+    </footer>
+
+    <script>
+        // Script JavaScript pour activer le menu burger
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+
+        burger.addEventListener('click', () => {
+            menu.classList.toggle('active'); // Toggle la classe active pour afficher ou masquer le menu
+        });
+    </script>
+</body>
+</html>
